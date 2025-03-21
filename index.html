@@ -3242,6 +3242,351 @@
             font-weight: normal;
             font-style: normal;
         }
+        /* Tickets & Location Section - Bubbly Child-Friendly Style */
+.tickets-location-section {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f9f9ff 0%, #f0f8ff 100%);
+    overflow: hidden;
+}
+
+/* Fun background pattern */
+.tickets-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 30% 30%, rgba(255, 159, 28, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(46, 196, 182, 0.1) 0%, transparent 40%);
+    z-index: 0;
+}
+
+/* Fun confetti dots */
+.tickets-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(#FF9F1C 1px, transparent 1px), 
+        radial-gradient(#2EC4B6 1px, transparent 1px),
+        radial-gradient(#E71D36 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px, 12px 12px;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+/* Wavy divider at top */
+.tickets-wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23011627'/%3E%3C/svg%3E");
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Wavy divider at bottom */
+.tickets-wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23011627'/%3E%3C/svg%3E");
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+/* Floating elements */
+.tickets-floating {
+    position: absolute;
+    z-index: 1;
+    font-size: 3rem;
+    opacity: 0.15;
+    animation: float-tickets 8s ease-in-out infinite;
+}
+
+.tickets-float-1 {
+    top: 20%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.tickets-float-2 {
+    bottom: 15%;
+    right: 8%;
+    animation-delay: 2s;
+}
+
+@keyframes float-tickets {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.tickets-location-container {
+    position: relative;
+    z-index: 2;
+}
+
+.tickets-location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: center;
+}
+
+/* Tickets Side */
+.tickets-content {
+    background-color: var(--white);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 8px solid var(--white);
+    transform: rotate(-2deg);
+    transition: all 0.3s ease;
+}
+
+.tickets-content:hover {
+    transform: rotate(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Fun dashed border */
+.tickets-content::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 3px dashed rgba(231, 29, 54, 0.2);
+    border-radius: 20px;
+    z-index: 0;
+}
+
+/* Ticket hole punch */
+.tickets-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.tickets-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.tickets-title {
+    color: var(--dark);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Fun title decoration */
+.tickets-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(46, 196, 182, 0.2);
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.tickets-text {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.ticket-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: rgba(231, 29, 54, 0.1);
+    border-radius: 15px;
+}
+
+.ticket-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1), 0 10px 20px rgba(255, 159, 28, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+}
+
+.ticket-btn:hover {
+    background-color: #e88c06;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1), 0 10px 15px rgba(255, 159, 28, 0.2);
+    top: 3px;
+}
+
+/* Location Map Side */
+.location-content {
+    position: relative;
+}
+
+.location-title {
+    color: var(--dark);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.map-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 8px solid var(--white);
+    transition: all 0.3s ease;
+    transform: rotate(2deg);
+}
+
+.map-container:hover {
+    transform: rotate(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.location-address {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.address-icon {
+    margin-right: 8px;
+    color: var(--secondary);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .tickets-title, .location-title {
+        font-size: 1.8rem;
+    }
+    
+    .tickets-text {
+        font-size: 1rem;
+    }
+    
+    .ticket-price {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .tickets-location-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tickets-content, .map-container {
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .tickets-floating {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .tickets-location-section {
+        padding: 60px 0;
+    }
+    
+    .tickets-wave-top,
+    .tickets-wave-bottom {
+        height: 40px;
+    }
+    
+    .tickets-content {
+        padding: 30px;
+    }
+    
+    .map-container {
+        padding-bottom: 85%; /* More height on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .tickets-content, .map-container {
+        border-width: 5px;
+        transform: none;
+    }
+    
+    .tickets-content:hover, .map-container:hover {
+        transform: none;
+    }
+    
+    .tickets-title, .location-title {
+        font-size: 1.6rem;
+    }
+    
+    .ticket-price {
+        font-size: 2rem;
+    }
+    
+    .ticket-btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
     </style>
 </head>
 <body>
@@ -3387,6 +3732,46 @@
                             <p class="performer-subtitle">Humorist</p>
                             <p class="performer-description">Get ready to laugh with the hilarious performance of humorist Dragos Mostenescu!</p>
                             <a href="#" class="btn-details">Let's Laugh! <i class="fas fa-smile"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tickets-location-section">
+        <!-- Decorative elements -->
+        <div class="tickets-pattern"></div>
+        <div class="tickets-dots"></div>
+        <div class="tickets-wave-top"></div>
+        <div class="tickets-wave-bottom"></div>
+        
+        <!-- Floating decorative elements -->
+        <div class="tickets-floating tickets-float-1">🎟️</div>
+        <div class="tickets-floating tickets-float-2">🗺️</div>
+        
+        <div class="tickets-location-container">
+            <div class="container">
+                <div class="tickets-location-grid">
+                    <!-- Tickets Purchase Side -->
+                    <div class="tickets-content">
+                        <div class="tickets-inner">
+                            <h2 class="tickets-title">Get Your Tickets!</h2>
+                            <p class="tickets-text">Join us for an amazing day full of fun activities, performances, and delicious food at Friends Kids' Festival!</p>
+                            <div class="ticket-price">£15 per person</div>
+                            <a href="#" class="ticket-btn">Buy Tickets Now!</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Map/Location Side -->
+                    <div class="location-content">
+                        <h2 class="location-title">Find Us Here</h2>
+                        <div class="map-container">
+                            <!-- Replace with your actual event location coordinates -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2367.7499200548206!2d-1.4808690230519295!3d53.55301697219838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48790523a66d8ead%3A0xccd0e143340846aa!2sBarnsley%20Town%20Hall!5e0!3m2!1sen!2suk!4v1711037891187!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="location-address">
+                            <i class="fas fa-map-marker-alt address-icon"></i> 123 Festival Street, Barnsley, UK
                         </div>
                     </div>
                 </div>
