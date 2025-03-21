@@ -1,0 +1,3902 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Prietenilor - Friends Kids' Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF9F1C;
+            --secondary: #2EC4B6;
+            --accent: #E71D36;
+            --dark: #011627;
+            --light: #FDFFFC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Baloo 2', cursive;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navbar */
+        header {
+            background-color: var(--dark);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: var(--light);
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            position: relative;
+            margin-left: 5px;
+        }
+
+        .nav-links li a {
+            color: var(--light);
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+        }
+
+        .nav-links li a:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--dark);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            padding: 10px 0;
+        }
+
+        .dropdown-content a {
+            color: var(--light);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+        }
+
+/* Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--dark);
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.festival-name {
+    font-size: 4rem;
+    color: var(--light);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1s ease-out;
+}
+
+.festival-slogan {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Responsive text sizes for smaller screens */
+@media (max-width: 992px) {
+    .festival-name {
+        font-size: 3rem;
+    }
+    .festival-slogan {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .festival-name {
+        font-size: 2.5rem;
+    }
+    .festival-slogan {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .festival-name {
+        font-size: 2rem;
+    }
+    .festival-slogan {
+        font-size: 1rem;
+    }
+}
+
+/* Countdown Timer - Fun Bubbly Child-Friendly Version */
+.countdown-section {
+    background-color: var(--dark);
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Playful background pattern */
+.countdown-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 159, 28, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 50%, rgba(46, 196, 182, 0.15) 0%, transparent 40%);
+    z-index: 0;
+}
+
+/* Floating bubbles */
+.countdown-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    animation: float-bubble 10s infinite ease-in-out;
+}
+
+.bubble-1 {
+    width: 70px;
+    height: 70px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble-2 {
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.bubble-3 {
+    width: 90px;
+    height: 90px;
+    top: 30%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.bubble-4 {
+    width: 40px;
+    height: 40px;
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 3s;
+}
+
+@keyframes float-bubble {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    33% { transform: translateY(-20px) translateX(10px); }
+    66% { transform: translateY(15px) translateX(-10px); }
+}
+
+.countdown-content {
+    position: relative;
+    z-index: 1;
+}
+
+.countdown-title {
+    color: var(--light);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+/* Fun star decoration */
+.countdown-title::before,
+.countdown-title::after {
+    content: '★';
+    position: absolute;
+    top: 0;
+    font-size: 1.8rem;
+    color: var(--primary);
+    animation: twinkle 3s infinite alternate;
+}
+
+.countdown-title::before {
+    left: -40px;
+    animation-delay: 0s;
+}
+
+.countdown-title::after {
+    right: -40px;
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.4; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+.countdown-subtitle {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.countdown-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.countdown-item:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.countdown-digit-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+.countdown-digit-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 
+        0 8px 0 rgba(0, 0, 0, 0.2),
+        0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.countdown-item:nth-child(1) .countdown-digit-bg {
+    background-color: var(--primary);
+}
+
+.countdown-item:nth-child(2) .countdown-digit-bg {
+    background-color: var(--secondary);
+}
+
+.countdown-item:nth-child(3) .countdown-digit-bg {
+    background-color: var(--accent);
+}
+
+.countdown-item:nth-child(4) .countdown-digit-bg {
+    background-color: #7209B7;
+}
+
+.countdown-digit {
+    position: relative;
+    font-family: 'Baloo 2', cursive;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 120px;
+    z-index: 1;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-label {
+    font-size: 1.1rem;
+    color: var(--light);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .countdown-digit-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .countdown-digit {
+        font-size: 3rem;
+        line-height: 100px;
+    }
+    
+    .countdown-title {
+        font-size: 2.2rem;
+    }
+    
+    .countdown-title::before,
+    .countdown-title::after {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-title::before {
+        left: -30px;
+    }
+    
+    .countdown-title::after {
+        right: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .countdown-item {
+        width: calc(50% - 20px);
+    }
+    
+    .countdown-digit-container {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 15px;
+    }
+    
+    .countdown-digit {
+        font-size: 2.5rem;
+        line-height: 90px;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-item {
+        width: calc(50% - 15px);
+    }
+    
+    .countdown-digit-container {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .countdown-digit {
+        font-size: 2rem;
+        line-height: 75px;
+    }
+    
+    .countdown-label {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+    }
+    
+    .countdown-title {
+        font-size: 1.8rem;
+    }
+    
+    .countdown-subtitle {
+        font-size: 1rem;
+    }
+    
+    .countdown-bubble {
+        display: none;
+    }
+}
+
+/* Performers Section - Super Fun Kids Version */
+.performers-section {
+    padding: 80px 0 100px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f9f9ff 0%, #f0f9ff 100%);
+}
+
+/* Playful floating background elements */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 0;
+    animation-name: float-bubble;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.bubble-1 {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD166;
+    top: 15%;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.bubble-2 {
+    width: 60px;
+    height: 60px;
+    background-color: #06D6A0;
+    top: 60%;
+    left: 5%;
+    animation-duration: 6s;
+}
+
+.bubble-3 {
+    width: 120px;
+    height: 120px;
+    background-color: #EF476F;
+    bottom: 10%;
+    right: 8%;
+    animation-duration: 10s;
+}
+
+.bubble-4 {
+    width: 70px;
+    height: 70px;
+    background-color: #118AB2;
+    top: 25%;
+    right: 12%;
+    animation-duration: 7s;
+}
+
+.bubble-5 {
+    width: 50px;
+    height: 50px;
+    background-color: #FFD166;
+    bottom: 20%;
+    left: 20%;
+    animation-duration: 9s;
+}
+
+@keyframes float-bubble {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+/* Colorful confetti pattern background */
+.confetti-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(#FF9F1C 2px, transparent 2px), 
+        radial-gradient(#2EC4B6 2px, transparent 2px),
+        radial-gradient(#E71D36 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px, 10px 10px;
+    opacity: 0.06;
+    z-index: 0;
+}
+
+.section-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    z-index: 1;
+    text-shadow: 3px 3px 0px rgba(255, 159, 28, 0.3);
+    letter-spacing: -0.5px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 15px;
+    background-color: rgba(46, 196, 182, 0.3);
+    z-index: -1;
+    transform: rotate(-2deg);
+    border-radius: 10px;
+}
+
+/* Rainbow decoration */
+.rainbow-decoration {
+    width: 180px;
+    height: 90px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    background: linear-gradient(to bottom, 
+        #FF9F1C 0%, 
+        #FF9F1C 20%,
+        #2EC4B6 20%, 
+        #2EC4B6 40%,
+        #E71D36 40%, 
+        #E71D36 60%,
+        #011627 60%, 
+        #011627 80%,
+        #7209B7 80%, 
+        #7209B7 100%);
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: #7209B7;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+.performers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.performer-card {
+    background-color: var(--white);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 10px solid var(--white);
+    transform-style: preserve-3d;
+}
+
+.performer-card:nth-child(1) {
+    border-color: rgba(255, 159, 28, 0.7);
+}
+
+.performer-card:nth-child(2) {
+    border-color: rgba(46, 196, 182, 0.7);
+}
+
+.performer-card:nth-child(3) {
+    border-color: rgba(231, 29, 54, 0.7);
+}
+
+.performer-card:hover {
+    transform: translateY(-20px) scale(1.03) rotate(2deg);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.performer-card:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(1, 22, 39, 0.05);
+    border-radius: 30px;
+    z-index: -1;
+    transform: translateZ(-10px);
+}
+
+.performer-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.performer-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.performer-card:hover .performer-image {
+    transform: scale(1.1);
+}
+
+/* Fun decorative elements on images */
+.performer-image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(135deg, var(--white) 25%, transparent 25%), 
+                      linear-gradient(225deg, var(--white) 25%, transparent 25%);
+    background-size: 20px 20px;
+    z-index: 1;
+}
+
+.performer-content {
+    padding: 30px 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.performer-title {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+.performer-card:hover .performer-title {
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+.performer-subtitle {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.performer-card:nth-child(1) .performer-subtitle {
+    background-color: var(--primary);
+}
+
+.performer-card:nth-child(2) .performer-subtitle {
+    background-color: var(--secondary);
+}
+
+.performer-card:nth-child(3) .performer-subtitle {
+    background-color: var(--accent);
+}
+
+.performer-subtitle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.performer-card:hover .performer-subtitle::before {
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+.performer-description {
+    color: var(--dark);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Fun emoji decorations */
+.performer-description::before {
+    position: absolute;
+    top: -25px;
+    left: -5px;
+    font-size: 1.8rem;
+    z-index: -1;
+}
+
+/* Interactive button with bounce effect */
+.btn-details {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(255, 159, 28, 0.3);
+    z-index: 1;
+}
+
+.performer-card:nth-child(1) .btn-details {
+    background-color: var(--primary);
+    box-shadow: 0 8px 15px rgba(255, 159, 28, 0.3);
+}
+
+.performer-card:nth-child(2) .btn-details {
+    background-color: var(--secondary);
+    box-shadow: 0 8px 15px rgba(46, 196, 182, 0.3);
+}
+
+.performer-card:nth-child(3) .btn-details {
+    background-color: var(--accent);
+    box-shadow: 0 8px 15px rgba(231, 29, 54, 0.3);
+}
+
+.btn-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btn-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-details:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn-details:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.headliner {
+    position: relative;
+    animation: pulse 3s infinite;
+}
+
+.headliner::after {
+    content: 'Headliner!';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: var(--accent);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(231, 29, 54, 0.4);
+    z-index: 10;
+    transform: rotate(8deg);
+    animation: bounce 1.5s infinite;
+}
+
+/* Fun star decoration around headliner badge */
+.headliner::before {
+    content: '★';
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    font-size: 3rem;
+    color: rgba(231, 29, 54, 0.2);
+    z-index: 9;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: rotate(8deg) translateY(0); }
+    50% { transform: rotate(8deg) translateY(-10px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fun floating elements */
+.star-decoration {
+    position: absolute;
+    color: var(--primary);
+    animation: float-star 3s ease-in-out infinite alternate;
+    opacity: 0.6;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.star-1 {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 50%;
+    left: 8%;
+    animation-delay: 0.5s;
+}
+
+.star-3 {
+    top: 30%;
+    right: 12%;
+    animation-delay: 1s;
+}
+
+.star-4 {
+    bottom: 20%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+@keyframes float-star {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* Interactive musical note elements */
+.music-note {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0;
+    z-index: 1;
+    animation: fly-up 3s forwards;
+    color: var(--primary);
+}
+
+@keyframes fly-up {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.7; }
+    100% { transform: translateY(-100px) rotate(20deg); opacity: 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .performers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    
+    .performer-image {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .performers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    .performer-image {
+        height: 200px;
+    }
+    
+    .performer-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .performers-section {
+        padding: 60px 0 80px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .performers-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .performer-card {
+        border-width: 8px;
+    }
+    
+    .bubble {
+        display: none;
+    }
+}
+
+/* Fun Activities Section - Super Child-Friendly Version */
+.activities-section {
+    padding: 80px 0 100px;
+    position: relative;
+    background: linear-gradient(135deg, #fcfcff 0%, #f0f9ff 100%);
+    overflow: hidden;
+}
+
+/* Playful background patterns */
+.activities-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 159, 28, 0.07) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(46, 196, 182, 0.07) 0%, transparent 50%);
+    z-index: 0;
+}
+
+/* Wavy divider top */
+.wave-divider-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23FDFFFC'/%3E%3C/svg%3E");
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Wavy divider bottom */
+.wave-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23FDFFFC'/%3E%3C/svg%3E");
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.activities-container {
+    position: relative;
+    z-index: 1;
+}
+
+.activities-title-container {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.activities-title {
+    font-size: 3rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-shadow: 3px 3px 0px rgba(46, 196, 182, 0.2);
+}
+
+/* Fun title decoration */
+.activities-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 15px;
+    background-color: rgba(231, 29, 54, 0.2);
+    z-index: -1;
+    transform: rotate(-1deg);
+    border-radius: 10px;
+}
+
+/* Bouncy dots decoration */
+.bouncy-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.bouncy-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: bounce-dot 2s infinite;
+}
+
+.bouncy-dot:nth-child(1) {
+    background-color: var(--primary);
+    animation-delay: 0s;
+}
+
+.bouncy-dot:nth-child(2) {
+    background-color: var(--secondary);
+    animation-delay: 0.2s;
+}
+
+.bouncy-dot:nth-child(3) {
+    background-color: var(--accent);
+    animation-delay: 0.4s;
+}
+
+.bouncy-dot:nth-child(4) {
+    background-color: var(--primary);
+    animation-delay: 0.6s;
+}
+
+.bouncy-dot:nth-child(5) {
+    background-color: var(--secondary);
+    animation-delay: 0.8s;
+}
+
+@keyframes bounce-dot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.activities-subtitle {
+    font-size: 1.3rem;
+    color: var(--dark);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Activity cards grid */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Alternating row offset for honeycomb effect */
+.activities-grid .activity-card:nth-child(4n+5),
+.activities-grid .activity-card:nth-child(4n+6),
+.activities-grid .activity-card:nth-child(4n+7),
+.activities-grid .activity-card:nth-child(4n+8) {
+    transform: translateX(15px);
+}
+
+.activity-card {
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Colorful variants */
+.activity-card:nth-child(4n+1) {
+    border-top: 8px solid var(--primary);
+}
+
+.activity-card:nth-child(4n+2) {
+    border-top: 8px solid var(--secondary);
+}
+
+.activity-card:nth-child(4n+3) {
+    border-top: 8px solid var(--accent);
+}
+
+.activity-card:nth-child(4n+4) {
+    border-top: 8px solid #7209B7;
+}
+
+/* Hover effects */
+.activity-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+    z-index: 5;
+}
+
+.activities-grid .activity-card:nth-child(4n+5):hover,
+.activities-grid .activity-card:nth-child(4n+6):hover,
+.activities-grid .activity-card:nth-child(4n+7):hover,
+.activities-grid .activity-card:nth-child(4n+8):hover {
+    transform: translateX(15px) translateY(-15px) scale(1.05);
+}
+
+/* Card background patterns */
+.activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f9f9f9' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.activity-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.activity-card:nth-child(4n+1) .activity-icon-wrapper {
+    background-color: rgba(255, 159, 28, 0.1);
+}
+
+.activity-card:nth-child(4n+2) .activity-icon-wrapper {
+    background-color: rgba(46, 196, 182, 0.1);
+}
+
+.activity-card:nth-child(4n+3) .activity-icon-wrapper {
+    background-color: rgba(231, 29, 54, 0.1);
+}
+
+.activity-card:nth-child(4n+4) .activity-icon-wrapper {
+    background-color: rgba(114, 9, 183, 0.1);
+}
+
+.activity-card:hover .activity-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.activity-icon {
+    font-size: 2.8rem;
+    transition: all 0.3s ease;
+}
+
+.activity-card:nth-child(4n+1) .activity-icon {
+    color: var(--primary);
+}
+
+.activity-card:nth-child(4n+2) .activity-icon {
+    color: var(--secondary);
+}
+
+.activity-card:nth-child(4n+3) .activity-icon {
+    color: var(--accent);
+}
+
+.activity-card:nth-child(4n+4) .activity-icon {
+    color: #7209B7;
+}
+
+.activity-card:hover .activity-icon {
+    transform: scale(1.1);
+}
+
+.activity-title {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover .activity-title {
+    transform: scale(1.05);
+}
+
+.activity-description {
+    color: var(--dark);
+    opacity: 0.8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Fun button */
+.activity-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background-color: var(--white);
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid #e5e5e5;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.activity-card:nth-child(4n+1) .activity-btn {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.activity-card:nth-child(4n+2) .activity-btn {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.activity-card:nth-child(4n+3) .activity-btn {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.activity-card:nth-child(4n+4) .activity-btn {
+    border-color: #7209B7;
+    color: #7209B7;
+}
+
+.activity-card:hover .activity-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.activity-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card:nth-child(4n+1) .activity-btn:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.activity-card:nth-child(4n+2) .activity-btn:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.activity-card:nth-child(4n+3) .activity-btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.activity-card:nth-child(4n+4) .activity-btn:hover {
+    background-color: #7209B7;
+    color: white;
+}
+
+/* Fun decorative elements */
+.floating-balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background-color: var(--accent);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    z-index: 0;
+    animation: float-balloon 8s ease-in-out infinite;
+}
+
+.balloon-1 {
+    top: 20%;
+    left: 5%;
+    background-color: var(--primary);
+    animation-delay: 0s;
+}
+
+.balloon-2 {
+    top: 15%;
+    right: 7%;
+    background-color: var(--secondary);
+    animation-delay: 2s;
+}
+
+.balloon-3 {
+    bottom: 25%;
+    left: 8%;
+    background-color: #7209B7;
+    animation-delay: 4s;
+}
+
+.balloon-string {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform-origin: top center;
+}
+
+@keyframes float-balloon {
+    0%, 100% { transform: translateY(0) rotate(3deg); }
+    50% { transform: translateY(-30px) rotate(-3deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .activities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Update offset for 3 columns layout */
+    .activities-grid .activity-card:nth-child(4n+5),
+    .activities-grid .activity-card:nth-child(4n+6),
+    .activities-grid .activity-card:nth-child(4n+7),
+    .activities-grid .activity-card:nth-child(4n+8) {
+        transform: translateX(0);
+    }
+    
+    .activities-grid .activity-card:nth-child(3n+4),
+    .activities-grid .activity-card:nth-child(3n+5),
+    .activities-grid .activity-card:nth-child(3n+6) {
+        transform: translateX(15px);
+    }
+    
+    .activities-grid .activity-card:nth-child(3n+4):hover,
+    .activities-grid .activity-card:nth-child(3n+5):hover,
+    .activities-grid .activity-card:nth-child(3n+6):hover {
+        transform: translateX(15px) translateY(-15px) scale(1.05);
+    }
+}
+
+@media (max-width: 992px) {
+    .activities-title {
+        font-size: 2.8rem;
+    }
+    
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Update offset for 2 columns layout */
+    .activities-grid .activity-card:nth-child(3n+4),
+    .activities-grid .activity-card:nth-child(3n+5),
+    .activities-grid .activity-card:nth-child(3n+6) {
+        transform: translateX(0);
+    }
+    
+    .activities-grid .activity-card:nth-child(2n+3),
+    .activities-grid .activity-card:nth-child(2n+4) {
+        transform: translateX(15px);
+    }
+    
+    .activities-grid .activity-card:nth-child(2n+3):hover,
+    .activities-grid .activity-card:nth-child(2n+4):hover {
+        transform: translateX(15px) translateY(-15px) scale(1.05);
+    }
+    
+    .floating-balloon {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-section {
+        padding: 60px 0 80px;
+    }
+    
+    .activities-title {
+        font-size: 3rem; /* Larger on tablets */
+    }
+    
+    .activities-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .activity-icon-wrapper {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .activity-icon {
+        font-size: 2.4rem;
+    }
+    
+    /* Remove offset for simpler layout */
+    .activities-grid .activity-card:nth-child(2n+3),
+    .activities-grid .activity-card:nth-child(2n+4) {
+        transform: translateX(0);
+    }
+    
+    .activities-grid .activity-card:nth-child(2n+3):hover,
+    .activities-grid .activity-card:nth-child(2n+4):hover {
+        transform: translateY(-15px) scale(1.05);
+    }
+}
+
+@media (max-width: 576px) {
+    .activities-title {
+        font-size: 3.5rem; /* Even larger on phones */
+        line-height: 1.1;
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .activity-card {
+        padding: 30px 20px;
+    }
+    
+    .bouncy-dots {
+        gap: 8px;
+    }
+    
+    .bouncy-dot {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .wave-divider-top,
+    .wave-divider-bottom {
+        height: 25px;
+    }
+}
+
+@media (max-width: 380px) {
+    .activities-title {
+        font-size: 3.2rem;
+    }
+    
+    .activities-grid {
+        max-width: 280px;
+    }
+}
+
+/* Traditional Food & Drinks Section - Fun & Bubbly Style */
+.food-section {
+    padding: 90px 0 100px;
+    position: relative;
+    background: linear-gradient(135deg, #fcfcff 0%, #fff6e9 100%);
+    overflow: hidden;
+}
+
+/* Playful background patterns */
+.food-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 90% 10%, rgba(255, 159, 28, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 10% 95%, rgba(231, 29, 54, 0.06) 0%, transparent 45%);
+    z-index: 0;
+}
+
+/* Diagonal wavy divider top */
+.food-wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23f0f9ff'/%3E%3C/svg%3E");
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Diagonal wavy divider bottom */
+.food-wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23f0f9ff'/%3E%3C/svg%3E");
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.food-container {
+    position: relative;
+    z-index: 2;
+}
+
+.food-title-container {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.food-title {
+    font-size: 3rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-shadow: 3px 3px 0px rgba(231, 29, 54, 0.15);
+}
+
+/* Fun title decoration */
+.food-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 15px;
+    background-color: rgba(255, 159, 28, 0.25);
+    z-index: -1;
+    transform: rotate(-1deg);
+    border-radius: 10px;
+}
+
+/* Fork and knife decoration */
+.utensil-decoration {
+    position: absolute;
+    font-size: 1.8rem;
+    color: rgba(46, 196, 182, 0.7);
+    z-index: 1;
+}
+
+.fork {
+    top: -5px;
+    left: -30px;
+    transform: rotate(-25deg);
+}
+
+.knife {
+    top: -5px;
+    right: -30px;
+    transform: rotate(25deg);
+}
+
+.food-subtitle {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.food-description {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark);
+    opacity: 0.9;
+}
+
+/* Bouncy dots (same as activities section) */
+.food-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.food-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: bounce-food-dot 2s infinite;
+}
+
+.food-dot:nth-child(1) {
+    background-color: var(--accent);
+    animation-delay: 0s;
+}
+
+.food-dot:nth-child(2) {
+    background-color: var(--primary);
+    animation-delay: 0.2s;
+}
+
+.food-dot:nth-child(3) {
+    background-color: var(--secondary);
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce-food-dot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Food display area */
+.food-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+/* Food showcase left side */
+.food-showcase {
+    flex: 1;
+    position: relative;
+}
+
+.food-image-container {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    transition: all 0.5s ease;
+}
+
+.food-image-container:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.food-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.food-image-container:hover .food-img {
+    transform: scale(1.05);
+}
+
+/* Food plate decoration */
+.plate-decoration {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--accent);
+    animation: float-plate 5s ease-in-out infinite;
+    z-index: 10;
+}
+
+.plate-1 {
+    top: -40px;
+    left: -40px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.plate-2 {
+    bottom: -30px;
+    right: -20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    animation-delay: 2s;
+}
+
+@keyframes float-plate {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* Food items right side */
+.food-items-container {
+    flex: 1;
+    position: relative;
+}
+
+.food-items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.food-item {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.food-item:nth-child(3n+1) {
+    background-color: rgba(255, 159, 28, 0.1);
+}
+
+.food-item:nth-child(3n+2) {
+    background-color: rgba(46, 196, 182, 0.1);
+}
+
+.food-item:nth-child(3n+3) {
+    background-color: rgba(231, 29, 54, 0.1);
+}
+
+.food-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.food-item-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.food-item:nth-child(3n+1) .food-item-name {
+    color: var(--primary);
+}
+
+.food-item:nth-child(3n+2) .food-item-name {
+    color: var(--secondary);
+}
+
+.food-item:nth-child(3n+3) .food-item-name {
+    color: var(--accent);
+}
+
+.food-item-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.food-item:hover .food-item-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Tooltip effect */
+.food-item-tooltip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 0.85rem;
+    color: var(--dark);
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.food-item:hover .food-item-tooltip {
+    transform: translateY(0);
+}
+
+/* See menu button */
+.menu-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.menu-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(231, 29, 54, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.menu-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(231, 29, 54, 0.4);
+}
+
+.menu-button:hover::before {
+    transform: translateX(100%);
+}
+
+.menu-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 5px 15px rgba(231, 29, 54, 0.4);
+}
+
+/* Floating food items */
+.floating-food {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    z-index: 0;
+    animation: float-food 7s ease-in-out infinite;
+}
+
+.food-float-1 {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.food-float-2 {
+    top: 20%;
+    right: 8%;
+    animation-delay: 2s;
+}
+
+.food-float-3 {
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes float-food {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(8deg); }
+    66% { transform: translateY(10px) rotate(-5deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .food-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .food-title {
+        font-size: 2.8rem;
+    }
+    
+    .food-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .food-showcase,
+    .food-items-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .floating-food {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .food-section {
+        padding: 70px 0 80px;
+    }
+    
+    .food-title {
+        font-size: 3rem; /* Larger on tablets */
+    }
+    
+    .food-wave-top,
+    .food-wave-bottom {
+        height: 30px;
+    }
+    
+    .food-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .food-title {
+        font-size: 3.5rem; /* Even larger on phones */
+        line-height: 1.1;
+    }
+    
+    .food-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .food-description {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .food-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .food-item {
+        padding: 15px 10px;
+    }
+    
+    .food-item-name {
+        font-size: 1rem;
+    }
+    
+    .plate-decoration {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .food-title {
+        font-size: 3.2rem;
+    }
+    
+    .food-items-grid {
+        grid-template-columns: 1fr;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+    
+    .plate-decoration {
+        width: 70px;
+        height: 70px;
+        font-size: 1.6rem;
+    }
+}
+
+/* Partners & Sponsors Section - Fun & Bubbly Style */
+.sponsors-section {
+    padding: 80px 0 100px;
+    position: relative;
+    background: linear-gradient(135deg, #f0f9ff 0%, #f5f5ff 100%);
+    overflow: hidden;
+}
+
+/* Playful background patterns */
+.sponsors-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 80% 20%, rgba(46, 196, 182, 0.07) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(255, 159, 28, 0.07) 0%, transparent 50%);
+    z-index: 0;
+}
+
+/* Confetti-like dot pattern */
+.sponsors-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(#FF9F1C 1.5px, transparent 1.5px), 
+        radial-gradient(#2EC4B6 1.5px, transparent 1.5px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+/* Curved divider top */
+.sponsors-curve-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Curved divider bottom */
+.sponsors-curve-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.sponsors-container {
+    position: relative;
+    z-index: 2;
+}
+
+.sponsors-title-container {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.sponsors-title {
+    font-size: 3rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-shadow: 3px 3px 0px rgba(46, 196, 182, 0.15);
+}
+
+/* Fun title decoration */
+.sponsors-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 15px;
+    background-color: rgba(255, 159, 28, 0.2);
+    z-index: -1;
+    transform: rotate(-1deg);
+    border-radius: 10px;
+}
+
+/* Star decorations around title */
+.star-decoration-sponsors {
+    position: absolute;
+    font-size: 1.8rem;
+    color: rgba(231, 29, 54, 0.6);
+    z-index: 1;
+    animation: twinkle 3s infinite alternate;
+}
+
+.star-left {
+    top: -10px;
+    left: -35px;
+    animation-delay: 0s;
+}
+
+.star-right {
+    top: -10px;
+    right: -35px;
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.4; transform: scale(0.8); }
+    100% { opacity: 0.9; transform: scale(1.1); }
+}
+
+.sponsors-subtitle {
+    font-size: 1.3rem;
+    color: var(--dark);
+    opacity: 0.8;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+}
+
+/* Bouncy dots (same as other sections) */
+.sponsors-bouncy-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.sponsors-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: bounce-sponsors-dot 2s infinite;
+}
+
+.sponsors-dot:nth-child(1) {
+    background-color: var(--secondary);
+    animation-delay: 0s;
+}
+
+.sponsors-dot:nth-child(2) {
+    background-color: var(--primary);
+    animation-delay: 0.2s;
+}
+
+.sponsors-dot:nth-child(3) {
+    background-color: var(--accent);
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce-sponsors-dot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Main sponsors area */
+.main-sponsor {
+    background-color: white;
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.main-sponsor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    z-index: 1;
+}
+
+.main-sponsor:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.main-sponsor-label {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background-color: var(--accent);
+    color: white;
+    padding: 5px 40px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.main-sponsor-logo {
+    max-width: 300px;
+    max-height: 130px;
+    margin: 25px auto 15px;
+    transition: all 0.3s ease;
+}
+
+.main-sponsor:hover .main-sponsor-logo {
+    transform: scale(1.05);
+}
+
+.main-sponsor-title {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.main-sponsor-text {
+    font-size: 1rem;
+    color: var(--dark);
+    opacity: 0.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Partners grid */
+.partners-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.sponsor-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 120px;
+}
+
+/* Color-coded borders */
+.sponsor-card:nth-child(5n+1) {
+    border-bottom: 4px solid var(--primary);
+}
+
+.sponsor-card:nth-child(5n+2) {
+    border-bottom: 4px solid var(--secondary);
+}
+
+.sponsor-card:nth-child(5n+3) {
+    border-bottom: 4px solid var(--accent);
+}
+
+.sponsor-card:nth-child(5n+4) {
+    border-bottom: 4px solid #7209B7;
+}
+
+.sponsor-card:nth-child(5n+5) {
+    border-bottom: 4px solid #3A86FF;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-logo {
+    max-width: 90%;
+    max-height: 80px;
+    transition: all 0.4s ease;
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+.sponsor-card:hover .sponsor-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Tooltip on hover */
+.sponsor-tooltip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 0.8rem;
+    color: var(--dark);
+    text-align: center;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.sponsor-card:hover .sponsor-tooltip {
+    transform: translateY(0);
+}
+
+/* Become a sponsor button */
+.become-sponsor-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.become-sponsor-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(46, 196, 182, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.become-sponsor-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.become-sponsor-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(46, 196, 182, 0.4);
+}
+
+.become-sponsor-btn:hover::before {
+    transform: translateX(100%);
+}
+
+/* Floating elements */
+.floating-badge {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    animation: float-badge 8s ease-in-out infinite;
+}
+
+.badge-1 {
+    top: 15%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.badge-2 {
+    bottom: 20%;
+    right: 5%;
+    animation-delay: 2s;
+}
+
+@keyframes float-badge {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .sponsors-title {
+        font-size: 2.8rem;
+    }
+    
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .floating-badge {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsors-section {
+        padding: 60px 0 80px;
+    }
+    
+    .sponsors-title {
+        font-size: 3rem; /* Larger on tablets */
+    }
+    
+    .sponsors-curve-top,
+    .sponsors-curve-bottom {
+        height: 40px;
+    }
+    
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .main-sponsor-logo {
+        max-width: 250px;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sponsors-title {
+        font-size: 3.5rem; /* Even larger on phones */
+        line-height: 1.1;
+    }
+    
+    .sponsors-subtitle {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    
+    .sponsors-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .sponsor-card {
+        height: 100px;
+        padding: 15px;
+    }
+    
+    .sponsor-logo {
+        max-height: 60px;
+    }
+    
+    .main-sponsor {
+        padding: 25px 15px;
+    }
+    
+    .partners-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .sponsors-title {
+        font-size: 3.2rem;
+    }
+    
+    .sponsors-grid {
+        grid-template-columns: 1fr;
+        max-width: 250px;
+    }
+    
+    .sponsor-card {
+        height: 90px;
+    }
+}
+
+/* Footer - Fun & Bubbly Style */
+.footer {
+    position: relative;
+    background-color: var(--dark);
+    color: var(--light);
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+/* Wavy divider at top */
+.footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z' fill='%23f0f9ff'/%3E%3C/svg%3E");
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Background pattern */
+.footer-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 90%, rgba(255, 159, 28, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 10%, rgba(46, 196, 182, 0.1) 0%, transparent 50%);
+    opacity: 0.8;
+    z-index: 0;
+}
+
+/* Fun dot pattern */
+.footer-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.footer-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Main footer grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+/* About section */
+.footer-about {
+    position: relative;
+}
+
+.footer-logo-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    height: 70px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Fun squiggle under logo */
+.logo-squiggle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='8' viewBox='0 0 100 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4C10 4 10 8 20 8S30 4 40 4 50 8 60 8 70 4 80 4s10 4 20 4' fill='none' stroke='%23FF9F1C' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: 100px 8px;
+    background-repeat: repeat-x;
+}
+
+.footer-text {
+    color: var(--light);
+    opacity: 0.9;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Updated social icons */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(50, 58, 69, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none; /* Ensures no underlines */
+}
+
+.social-icon:hover {
+    background-color: rgba(62, 72, 83, 0.9);
+}
+
+
+.facebook-icon {
+    color: #ffffff;
+}
+
+.instagram-icon {
+    color: #ffffff;
+}
+
+.youtube-icon {
+    color: #ffffff;
+}
+
+.twitter-icon {
+    color: #ffffff;
+}
+
+/* Column titles */
+.footer-column-title {
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+/* Fun title decoration */
+.footer-column-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 70%;
+    width: 5px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border-radius: 5px;
+}
+
+/* Links list */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link {
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer-link::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    transform: translateX(5px);
+}
+
+.footer-link:hover::before {
+    color: var(--primary);
+}
+
+.footer-link a {
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.footer-link a:hover {
+    color: var(--primary);
+}
+
+/* Contact items */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.contact-text {
+    color: var(--light);
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Newsletter form */
+.newsletter-form {
+    margin-top: 15px;
+    position: relative;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.3);
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 7px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(46, 196, 182, 0.5);
+}
+
+/* Bottom bar */
+.footer-bottom {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+    color: var(--light);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.heart-icon {
+    color: var(--accent);
+    animation: beat 1.5s ease infinite;
+    display: inline-block;
+    transform-origin: center;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.2); }
+}
+
+/* Floating elements */
+.footer-floating-element {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.15;
+    animation: float-footer 8s ease-in-out infinite;
+}
+
+.footer-element-1 {
+    top: 20%;
+    left: 5%;
+    font-size: 3rem;
+    animation-delay: 0s;
+}
+
+.footer-element-2 {
+    top: 30%;
+    right: 7%;
+    font-size: 2.5rem;
+    animation-delay: 2s;
+}
+
+.footer-element-3 {
+    bottom: 15%;
+    left: 10%;
+    font-size: 2.8rem;
+    animation-delay: 4s;
+}
+
+@keyframes float-footer {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* Go to top button */
+.go-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.go-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.go-top-btn:hover {
+    background-color: var(--secondary);
+    transform: translateY(-5px);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .footer-column:nth-child(4) {
+        grid-column: span 3;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding-top: 80px;
+    }
+    
+    .footer-wave {
+        height: 50px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .footer-about {
+        grid-column: span 2;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-column:nth-child(4) {
+        grid-column: span 2;
+    }
+    
+    .footer-floating-element {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 70px;
+    }
+    
+    .footer-wave {
+        height: 40px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-about,
+    .footer-column:nth-child(4) {
+        grid-column: span 1;
+    }
+    
+    .footer-column-title {
+        padding-left: 0;
+    }
+    
+    .footer-column-title::before {
+        left: 50%;
+        top: auto;
+        bottom: -10px;
+        height: 4px;
+        width: 50px;
+        transform: translateX(-50%);
+    }
+    
+    .footer-link {
+        padding-left: 0;
+    }
+    
+    .footer-link::before {
+        display: none;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .go-top-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding-top: 60px;
+    }
+    
+    .footer-logo {
+        height: 60px;
+    }
+    
+    .footer-text {
+        font-size: 0.95rem;
+    }
+    
+    .footer-column-title {
+        font-size: 1.3rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 8px;
+        font-size: 1.3rem;
+    }
+}
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .festival-name {
+                font-size: 3rem;
+            }
+            .festival-slogan {
+                font-size: 1.5rem;
+            }
+            .countdown-digit {
+                font-size: 2.5rem;
+                min-width: 70px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 5px 20px;
+            }
+            
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .dropdown-content a {
+                padding-left: 30px;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .festival-name {
+                font-size: 2.5rem;
+            }
+            
+            .festival-slogan {
+                font-size: 1.2rem;
+            }
+            
+            .countdown-container {
+                flex-wrap: wrap;
+            }
+            
+            .countdown-digit {
+                font-size: 2rem;
+                min-width: 60px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .festival-name {
+                font-size: 2rem;
+            }
+            
+            .festival-slogan {
+                font-size: 1rem;
+            }
+            
+            .countdown-digit {
+                font-size: 1.5rem;
+                min-width: 50px;
+            }
+            
+            .performer-title {
+                font-size: 1.5rem;
+            }
+            
+            .performer-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Custom Digital Font */
+        @font-face {
+            font-family: 'Digital-7';
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/digital-7/1.0.0/digital-7.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="data:image/png;base64,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" alt="Friends Kids' Festival Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Despre</a></li>
+                    <li><a href="#">Anglia prin Ochii Mei</a></li>
+                    <li><a href="#">Cont</a></li>
+                    <li class="dropdown">
+                        <a href="#">Evenimente <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Friends Kids Festival</a>
+                            <a href="#">Gallery</a>
+                            <a href="#">Petreceri</a>
+                            <a href="#">Friends East Folkloric Festival</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <img src="banner.png" alt="Festival Banner" class="banner-image">
+        <div class="banner-overlay">
+        </div>
+    </section>
+
+    <section class="countdown-section">
+        <!-- Background elements -->
+        <div class="countdown-bg-pattern"></div>
+        <div class="countdown-bubble bubble-1"></div>
+        <div class="countdown-bubble bubble-2"></div>
+        <div class="countdown-bubble bubble-3"></div>
+        <div class="countdown-bubble bubble-4"></div>
+        
+        <div class="countdown-content">
+            <div class="container">
+                <h2 class="countdown-title">The Adventure Begins In:</h2>
+                <p class="countdown-subtitle">Get ready for all the fun!</p>
+                
+                <div class="countdown-container" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-digit-container">
+                            <div class="countdown-digit-bg"></div>
+                            <div class="countdown-digit" id="days">00</div>
+                        </div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    
+                    <div class="countdown-item">
+                        <div class="countdown-digit-container">
+                            <div class="countdown-digit-bg"></div>
+                            <div class="countdown-digit" id="hours">00</div>
+                        </div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    
+                    <div class="countdown-item">
+                        <div class="countdown-digit-container">
+                            <div class="countdown-digit-bg"></div>
+                            <div class="countdown-digit" id="minutes">00</div>
+                        </div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    
+                    <div class="countdown-item">
+                        <div class="countdown-digit-container">
+                            <div class="countdown-digit-bg"></div>
+                            <div class="countdown-digit" id="seconds">00</div>
+                        </div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performers-section">
+        <!-- Floating bubbles -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        
+        <!-- Confetti background -->
+        <div class="confetti-bg"></div>
+        
+        <!-- Floating stars -->
+        <div class="star-decoration star-1">★</div>
+        <div class="star-decoration star-2">★</div>
+        <div class="star-decoration star-3">★</div>
+        <div class="star-decoration star-4">★</div>
+        
+        <div class="section-wrapper">
+            <div class="container">
+                <div class="section-title-container">
+                    <h2 class="section-title">Meet Our Super Stars!</h2>
+                    <div class="rainbow-decoration"></div>
+                </div>
+                
+                <div class="performers-grid">
+                    <div class="performer-card headliner" data-note="♫">
+                        <div class="performer-image-container">
+                            <img src="jean.jpg" alt="Jean de la Craiova" class="performer-image">
+                        </div>
+                        <div class="performer-content">
+                            <h3 class="performer-title">Jean de la Craiova</h3>
+                            <p class="performer-subtitle">Main Stage</p>
+                            <p class="performer-description">Join us for an unforgettable performance by the legendary Jean de la Craiova!</p>
+                            <a href="#" class="btn-details">I Want to See This! <i class="fas fa-music"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="performer-card" data-note="♪">
+                        <div class="performer-image-container">
+                            <img src="andreea.webp" alt="Formatia Noua & Andreea Gina" class="performer-image">
+                        </div>
+                        <div class="performer-content">
+                            <h3 class="performer-title">Formatia Noua & Andreea Gina</h3>
+                            <p class="performer-subtitle">Live Music</p>
+                            <p class="performer-description">Experience the amazing musical performance with special guest Andreea Gina Someshima.</p>
+                            <a href="#" class="btn-details">Check It Out! <i class="fas fa-star"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="performer-card" data-note="♬">
+                        <div class="performer-image-container">
+                            <img src="dragoszl169-1_3_orig.jpg" alt="Dragos Mostenescu" class="performer-image">
+                        </div>
+                        <div class="performer-content">
+                            <h3 class="performer-title">Dragos Mostenescu</h3>
+                            <p class="performer-subtitle">Humorist</p>
+                            <p class="performer-description">Get ready to laugh with the hilarious performance of humorist Dragos Mostenescu!</p>
+                            <a href="#" class="btn-details">Let's Laugh! <i class="fas fa-smile"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities-section">
+        <!-- Wavy dividers -->
+        <div class="wave-divider-top"></div>
+        <div class="wave-divider-bottom"></div>
+        
+        <!-- Floating balloons -->
+        <div class="floating-balloon balloon-1">
+            <div class="balloon-string"></div>
+        </div>
+        <div class="floating-balloon balloon-2">
+            <div class="balloon-string"></div>
+        </div>
+        <div class="floating-balloon balloon-3">
+            <div class="balloon-string"></div>
+        </div>
+        
+        <div class="activities-container">
+            <div class="container">
+                <div class="activities-title-container">
+                    <h2 class="activities-title">Fun Activities!</h2>
+                    <div class="bouncy-dots">
+                        <div class="bouncy-dot"></div>
+                        <div class="bouncy-dot"></div>
+                        <div class="bouncy-dot"></div>
+                        <div class="bouncy-dot"></div>
+                        <div class="bouncy-dot"></div>
+                    </div>
+                    <p class="activities-subtitle">So many exciting things to do!</p>
+                </div>
+                
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-music activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">DJ Floryo</h3>
+                        <p class="activity-description">Dance to the beats of DJ Floryo throughout the festival!</p>
+                        <a href="#" class="activity-btn">Let's Dance!</a>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-hat-wizard activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">Magician</h3>
+                        <p class="activity-description">Be amazed by spectacular magic tricks and illusions!</p>
+                        <a href="#" class="activity-btn">See Magic!</a>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-mask activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">Mascote</h3>
+                        <p class="activity-description">Meet and take pictures with your favorite characters!</p>
+                        <a href="#" class="activity-btn">Meet Them!</a>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-wind activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">Inflatables</h3>
+                        <p class="activity-description">Bounce and play on our fun inflatable attractions!</p>
+                        <a href="#" class="activity-btn">Let's Bounce!</a>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-gamepad activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">Interactive Games</h3>
+                        <p class="activity-description">Participate in fun games and competitions with prizes!</p>
+                        <a href="#" class="activity-btn">Play Now!</a>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-running activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">Sack Race</h3>
+                        <p class="activity-description">Join the traditional sack race and win amazing prizes!</p>
+                        <a href="#" class="activity-btn">Join Race!</a>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-paint-brush activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">Face Painting</h3>
+                        <p class="activity-description">Transform into your favorite character with face painting!</p>
+                        <a href="#" class="activity-btn">Get Painted!</a>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon-wrapper">
+                            <i class="fas fa-gifts activity-icon"></i>
+                        </div>
+                        <h3 class="activity-title">Prizes & Surprises</h3>
+                        <p class="activity-description">Exciting prizes and surprises throughout the day!</p>
+                        <a href="#" class="activity-btn">Win Prizes!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="food-section">
+        <!-- Background patterns and waves -->
+        <div class="food-pattern"></div>
+        <div class="food-wave-top"></div>
+        <div class="food-wave-bottom"></div>
+        
+        <!-- Floating food elements -->
+        <div class="floating-food food-float-1">🍲</div>
+        <div class="floating-food food-float-2">🥘</div>
+        <div class="floating-food food-float-3">🍷</div>
+        
+        <div class="food-container">
+            <div class="container">
+                <div class="food-title-container">
+                    <h2 class="food-title">
+                        <span class="utensil-decoration fork"><i class="fas fa-utensils"></i></span>
+                        Traditional Food & Drinks
+                        <span class="utensil-decoration knife"><i class="fas fa-utensil-spoon"></i></span>
+                    </h2>
+                    <div class="food-dots">
+                        <div class="food-dot"></div>
+                        <div class="food-dot"></div>
+                        <div class="food-dot"></div>
+                    </div>
+                    <p class="food-subtitle">Experience Authentic Romanian Cuisine</p>
+                    <p class="food-description">Enjoy a variety of traditional Romanian food and drinks available for purchase at our festival. From mouthwatering mici and sarmale to delicious cozonac and plăcintă, we have something for everyone!</p>
+                </div>
+                
+                <div class="food-content-wrapper">
+                    <div class="food-showcase">
+                        <div class="food-image-container">
+                            <img src="images.jpg" alt="Traditional Romanian Food" class="food-img">
+                        </div>
+                        <!-- Decorative plate elements -->
+                        <div class="plate-decoration plate-1">🍽️</div>
+                        <div class="plate-decoration plate-2">🍴</div>
+                    </div>
+                    
+                    <div class="food-items-container">
+                        <div class="food-items-grid">
+                            <div class="food-item">
+                                <div class="food-item-icon">🍖</div>
+                                <h4 class="food-item-name">Mici</h4>
+                                <div class="food-item-tooltip">Traditional Romanian grilled meat rolls</div>
+                            </div>
+                            
+                            <div class="food-item">
+                                <div class="food-item-icon">🥬</div>
+                                <h4 class="food-item-name">Sarmale</h4>
+                                <div class="food-item-tooltip">Cabbage rolls stuffed with meat and rice</div>
+                            </div>
+                            
+                            <div class="food-item">
+                                <div class="food-item-icon">🍞</div>
+                                <h4 class="food-item-name">Cozonac</h4>
+                                <div class="food-item-tooltip">Sweet bread with walnut filling</div>
+                            </div>
+                            
+                            <div class="food-item">
+                                <div class="food-item-icon">🥧</div>
+                                <h4 class="food-item-name">Plăcintă</h4>
+                                <div class="food-item-tooltip">Traditional Romanian pie with various fillings</div>
+                            </div>
+                            
+                            <div class="food-item">
+                                <div class="food-item-icon">🌽</div>
+                                <h4 class="food-item-name">Mămăligă</h4>
+                                <div class="food-item-tooltip">Romanian polenta, similar to cornmeal porridge</div>
+                            </div>
+                            
+                            <div class="food-item">
+                                <div class="food-item-icon">🥃</div>
+                                <h4 class="food-item-name">Țuică</h4>
+                                <div class="food-item-tooltip">Traditional Romanian plum brandy</div>
+                            </div>
+                            
+                            <div class="food-item">
+                                <div class="food-item-icon">🍒</div>
+                                <h4 class="food-item-name">Visinată</h4>
+                                <div class="food-item-tooltip">Sour cherry liqueur</div>
+                            </div>
+                            
+                            <div class="food-item">
+                                <div class="food-item-icon">🍮</div>
+                                <h4 class="food-item-name">Papanași</h4>
+                                <div class="food-item-tooltip">Romanian fried dough with cheese and jam</div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-button-container">
+                            <a href="#" class="menu-button">See Full Menu <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors-section">
+        <!-- Background patterns and curves -->
+        <div class="sponsors-pattern"></div>
+        <div class="sponsors-dots"></div>
+        <div class="sponsors-curve-top"></div>
+        <div class="sponsors-curve-bottom"></div>
+        
+        <!-- Floating badge elements -->
+        <div class="floating-badge badge-1">🏆</div>
+        <div class="floating-badge badge-2">🎖️</div>
+        
+        <div class="sponsors-container">
+            <div class="container">
+                <div class="sponsors-title-container">
+                    <h2 class="sponsors-title">
+                        <span class="star-decoration-sponsors star-left">★</span>
+                        Our Partners & Sponsors
+                        <span class="star-decoration-sponsors star-right">★</span>
+                    </h2>
+                    <div class="sponsors-bouncy-dots">
+                        <div class="sponsors-dot"></div>
+                        <div class="sponsors-dot"></div>
+                        <div class="sponsors-dot"></div>
+                    </div>
+                    <p class="sponsors-subtitle">We're grateful to all the amazing organizations that help make this festival possible for our community!</p>
+                </div>
+                
+                <!-- Main sponsor spotlight -->
+                <div class="main-sponsor">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAB4CAYAAABIFc8gAAAAAXNSR0IArs4c6QAADdVJREFUeF7tneeu4zgMRj1tp/fee3//t5i/03vvvffFCVaBliNbshMPLqPPwMXsIrZDHdKfSbUsu3Dhwu9GhwiIgAg4ILBMguXASzJRBERgQkCCpUAQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCpRgQARFwQ0CC5cZVMlQERECCZWJgzZo1ze7du5tNmzY1q1atapYtWzY549evX82PHz+ad+/eNY8fP26+ffvWO3q2b9/e7Nixo1m7dm2zYsWK6fU/f/5sPn782Dx//rx58+ZN7/uuX7++2bVrV7Nx48Zm5cqV/7P569evzatXryb35ntqOeB76tSpZt26dc3379+b27dvN+/fv+/V/H/++WfCdfPmzQ3/vXz58un1xAMx8Pbt2+bZs2e942GsWOjVQIcnS7Aipx08eLAhkGIxSfmUB//ly5fN/fv3i1xOsB86dGgigkEAUxf+/v17Ioj37t0rfgD27ds3eahyNiNcDx48GCSIRY1cYift379/8uKB9xDBKuVKs3mRPXnypHn69GmWwpixkP3yBThBgvWfE48cOdJs27atU1BifyMuZC537tzpDAMytsOHDzcbNmwoDpcPHz40d+/ebb58+dJ5DSKIwMZv/q4LeHARLexe5GPLli0T5mSbHH0Fq28shAyclxgvm7ZjzFhYZH/GbZNgNU3D25S3cfzgf/78uXnx4sUkIyGjQsx27tw5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" alt="Barnsley Council Logo" class="main-sponsor-logo">
+                    <h3 class="main-sponsor-title">Barnsley Council</h3>
+                    <p class="main-sponsor-text">Supporting our community and helping bring Romanian culture to families across the region.</p>
+                </div>
+                
+                <!-- Partners grid -->
+                <h3 class="partners-title">Our Valued Partners</h3>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 1" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Community Partner</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 2" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Gold Sponsor</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 3" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Silver Sponsor</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 4" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Bronze Sponsor</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 5" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Event Partner</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABQCAYAAAD7sIxLAAAAAXNSR0IArs4c6QAACixJREFUeF7tnNeO1jAQhb303nuHpfP+b8EtovfeWXpf9EWaaHaYxE7yG1g0lhBl7Yl9fKbaZu7ixYuLKVogMGME5oJYM0Y0xDUIBLGCCFUQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEFhPryJEjadeuXQ1iT548SY8ePSpG7/Tp02nz5s3F/aXjt2/f0u3bt9O7d+96x27cuDHt2bOn+caqVavS3Nxc0//nz5/py5cv6dWrV+n58+fpx48fg+ewHAasXLky7d27N23bti2tXbs2rVixopn24uJis+aPHz82GLx8+XLwcnbu3Nns+/r16xPfkYbcDx8+NLi+efPmN7lFxNq6dWs6evRoWr16dTPZIcRat25dOnnyZLPgoa2EWAcOHGhIpRftfQeCPXjwwAVh6Lz+pf47duxIYJDDl31DQe/fv58+f/6cXcKaNWsSxmTLli2tonqDkPv27dt079699PXr17ZLllhsGMTYtGlTqwVDiAUpjx071liSoS1HLBaORomG5uQjD3Khvf9D2717d0OqIdh++vQp3bp1q5dcGAMMiex5CVbv379Pd+/ebeX2EgtSHT9+fAlrh1qsffv2pf3797ebj/ks0RgWg7nF1Hr9AfXgwYNLLBUm/9mzZ41VwrpiwiGeBr4E2BIg/3Yf3D97oy0VeLF2MAPn7du3NxgQIkh4wLwXFhbSjRs3OpeAIcAS6pCCMcjF6mEskMvv0gdeoLB37txp5HYSC1LBWvy2ntRQYiFDYjPGPn78uPk1paFRJ06caPy+xBJ6UVo2oGLZGCN9X7x40Zju5dxYE8olDTfEmiCAbSgg4YJYdgiI5QYH29irQ4cOtQpL34cPHzaksg2jwS8JQ75//964WvbCJRabwMS9gHsosU6dOtVYPBofZvGvX7+etKfWCmKprl271hmco32HDx9uLRfxFkkBWr1c2/nz51vFIklBWQlRuhrhDBZGGpsPBrbpfux1TgklqRPjI9bwN2LBWDZOm1gmrjON0hgLJp89e7a1FmwoJrjUFXaBpLPMUqJrwEo24l8mHAqPG8Td07BWkIQ4p6thsbBcso/0vXr16pLuVm4uxmUwLhnvQbAvcyGGa4lFBwiFddHBMD6ViROr0Eo3kr7Iwl8LAMjCskxpdiEli+d71soRi9y8eXPKVP7aWEsAFPXSpUu982H/sNritrwxFqPS/Zqfn29CJpoobUssHQvRAd9K3YN6FT5Xx0mlFstqCWaVzGFKYx4AJOTHDV6+fDkr0manAHvlypXBtS02FWURDeXDaD+WuK9OhoXBJUvri4lyi/EsC0EzaX+pxfJwY11iQJBDXFUSi8IP9lrcIbxxicVHCdhkojYALyWW/qAwGQtjC25YQeIvNISsri/2Ib1Gs2QRpZbH1tNKLZ23UVazmT/zJiAu6Q8W4MuYse3cuXNpw4YNxV4Ed0WWKM2LsXSIMSRcsAaEfVxCLNwMLLUZwFhiaROJNmMlAENnmRZYsZRkF16zlnWIFbxw4UIb7/EdvjGmGs287EZBVKyxzcqshbNp+VhiWQXrs4BsPP297E1/fyw+npvNFkj58Fhi6cxlCICAjyVio6x70Rs6JN7j+1YjIZaXcpfM1ZY8GIOmErfJnNlI5itZMX1mVUfzZPNdObrB6ku9ScfNXcSeYtG9mK8asajaElfoWARgyQyxEpQcsGBMCsYDgi5kAgD9bEw2JiMUokwZ65HNFmlxH7g33ByNLIwzPLHQuHvW452tlZDZ9oFcpPsEziWnD33eYExGKPPxxlYjlg2yIQpkIhj0glzvGEEX3GZBjlkTiznZKjUuiUBaCsyiLJZ0Y4jkjUFxiflyR1u4amLjrrhu2RALbca3U2pAm0gE+o4RAM07sLZB5hRyTBnbRQTPJRJnsW4JrhnL+q9fvz4rPjVySg/g9UdxxSQZNoNcNsQai6B1H1gACm6SKU4hx5SxfeuxlX3bd1aFYS3XWkp+RmiBIubCDDwB7lrHl/89sewCcZu4T7mRMIUcU8bmFMXWcqR/31lbTmbXz21s1xWPyngvzLBJxH9PLMDQaa89uNZFvL+ZFXqBtM0Acxs+llhnzpxZcqUFC4VV72vewf3Tp0/bRMMevw2p8/3RrHAsaIzTwFny/Ct1LG999qCXPrkrKkNxstk2bo1kwbvVYGXbwq49L1w2dayhoEn/PotlC4Ml2uolBkM0smQdzIvSgk37yQaxDEOucvd9r+TMr2u8Pbvti1+HnA70Vt77FjO2QKprU6UX/GxmaCvkBMrUbqSK7J3Se2vxzgpzB7clhKKPd36ox045F7RzsMQqPSiWeepbEVa57D73HVPpedn4kqSgSh3LmmvYX1rltsSxWtV1TSN3t2rsGWOOXF4FXFJ5XXHn34iDpj7o8CxW6WG6Z7H0dZuxN0C8M8YqxGIz9CEpfy89Kbe3ALwYZcxhqb3AVnqQniOWvZ0p1olx8gCFPxMr6mA5J7fr51ZpbdbcJ9e7IKlvhnj3vHSpx5PddY2pGrG8q7MEmX1Puey12C4/bwHKnb9ZudYKjt1k/XoJGX/qSMdmhSXFVywrCqmLtp6yWwX0jtU0XigPVjR7g9QDeUyMZdmPXPuSQ3+L8y7uWemzRXuoK/291BlwMevW1bD5yNU3YgFLLv2PJZV9vYQc6+7oww0PfcW75O5Wbk42WJayBhV1z9WCKXuoXXNX8uLdecfSeu8UeCRDwiLxrr5LX81iAY51E/wb6TEbS4BHpZiNh/EsWr8NzAW8FlxkY7nQQoqptV/p2LveXddmUBg2Vc4MS+6R54jFz73KOxV+smQOuYk5cVPcweKXVtjcuaW9EsScCUnYM373XukwJ338VpVYXQDkgPOOHLwxHrh9smf1rtBqdS5+sllT3yuZHDbycy9pKBlbUrT1zj9zsge9KxRhY1yhnsiQw1Jur2LSc8/qRT5uDov3p15Cl9zDspvgxTe5uDC3kfwcuXiF3M0GkYXC4tb6XvPocANs7ZtEO6/RL6ERNJVYyJDrHUyUP+tXP5hmgBYXWQKq7tP3fzfgUnENgDk11fcscJcLtGuwB9WzuknKdyA7sQ7Yym0S+T5rBgN5cKqfwZfg3Pd/N7BnuEfvFm6RKyyZQPQJBDQCQazgQxUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hvwACLb/3EsH1jQAAAABJRU5ErkJggg==" alt="Sponsor 6" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Media Partner</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 7" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Community Support</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABQCAYAAAD7sIxLAAAAAXNSR0IArs4c6QAACixJREFUeF7tnNeO1jAQhb303nuHpfP+b8EtovfeWXpf9EWaaHaYxE7yG1g0lhBl7Yl9fKbaZu7ixYuLKVogMGME5oJYM0Y0xDUIBLGCCFUQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEBrGCA1UQCGJVgTWEFhPryJEjadeuXQ1iT548SY8ePSpG7/Tp02nz5s3F/aXjt2/f0u3bt9O7d+96x27cuDHt2bOn+caqVavS3Nxc0//nz5/py5cv6dWrV+n58+fpx48fg+ewHAasXLky7d27N23bti2tXbs2rVixopn24uJis+aPHz82GLx8+XLwcnbu3Nns+/r16xPfkYbcDx8+NLi+efPmN7lFxNq6dWs6evRoWr16dTPZIcRat25dOnnyZLPgoa2EWAcOHGhIpRftfQeCPXjwwAVh6Lz+pf47duxIYJDDl31DQe/fv58+f/6cXcKaNWsSxmTLli2tonqDkPv27dt079699PXr17ZLllhsGMTYtGlTqwVDiAUpjx071liSoS1HLBaORomG5uQjD3Khvf9D2717d0OqIdh++vQp3bp1q5dcGAMMiex5CVbv379Pd+/ebeX2EgtSHT9+fAlrh1qsffv2pf3797ebj/ks0RgWg7nF1Hr9AfXgwYNLLBUm/9mzZ41VwrpiwiGeBr4E2BIg/3Yf3D97oy0VeLF2MAPn7du3NxgQIkh4wLwXFhbSjRs3OpeAIcAS6pCCMcjF6mEskMvv0gdeoLB37txp5HYSC1LBWvy2ntRQYiFDYjPGPn78uPk1paFRJ06caPy+xBJ6UVo2oGLZGCN9X7x40Zju5dxYE8olDTfEmiCAbSgg4YJYdgiI5QYH29irQ4cOtQpL34cPHzaksg2jwS8JQ75//964WvbCJRabwMS9gHsosU6dOtVYPBofZvGvX7+etKfWCmKprl271hmco32HDx9uLRfxFkkBWr1c2/nz51vFIklBWQlRuhrhDBZGGpsPBrbpfux1TgklqRPjI9bwN2LBWDZOm1gmrjON0hgLJp89e7a1FmwoJrjUFXaBpLPMUqJrwEo24l8mHAqPG8Td07BWkIQ4p6thsbBcso/0vXr16pLuVm4uxmUwLhnvQbAvcyGGa4lFBwiFddHBMD6ViROr0Eo3kr7Iwl8LAMjCskxpdiEli+d71soRi9y8eXPKVP7aWEsAFPXSpUu982H/sNritrwxFqPS/Zqfn29CJpoobUssHQvRAd9K3YN6FT5Xx0mlFstqCWaVzGFKYx4AJOTHDV6+fDkr0manAHvlypXBtS02FWURDeXDaD+WuK9OhoXBJUvri4lyi/EsC0EzaX+pxfJwY11iQJBDXFUSi8IP9lrcIbxxicVHCdhkojYALyWW/qAwGQtjC25YQeIvNISsri/2Ib1Gs2QRpZbH1tNKLZ23UVazmT/zJiAu6Q8W4MuYse3cuXNpw4YNxV4Ed0WWKM2LsXSIMSRcsAaEfVxCLNwMLLUZwFhiaROJNmMlAENnmRZYsZRkF16zlnWIFbxw4UIb7/EdvjGmGs287EZBVKyxzcqshbNp+VhiWQXrs4BsPP297E1/fyw+npvNFkj58Fhi6cxlCICAjyVio6x70Rs6JN7j+1YjIZaXcpfM1ZY8GIOmErfJnNlI5itZMX1mVUfzZPNdObrB6ku9ScfNXcSeYtG9mK8asajaElfoWARgyQyxEpQcsGBMCsYDgi5kAgD9bEw2JiMUokwZ65HNFmlxH7g33ByNLIwzPLHQuHvW452tlZDZ9oFcpPsEziWnD33eYExGKPPxxlYjlg2yIQpkIhj0glzvGEEX3GZBjlkTiznZKjUuiUBaCsyiLJZ0Y4jkjUFxiflyR1u4amLjrrhu2RALbca3U2pAm0gE+o4RAM07sLZB5hRyTBnbRQTPJRJnsW4JrhnL+q9fvz4rPjVySg/g9UdxxSQZNoNcNsQai6B1H1gACm6SKU4hx5SxfeuxlX3bd1aFYS3XWkp+RmiBIubCDDwB7lrHl/89sewCcZu4T7mRMIUcU8bmFMXWcqR/31lbTmbXz21s1xWPyngvzLBJxH9PLMDQaa89uNZFvL+ZFXqBtM0Acxs+llhnzpxZcqUFC4VV72vewf3Tp0/bRMMevw2p8/3RrHAsaIzTwFny/Ct1LG999qCXPrkrKkNxstk2bo1kwbvVYGXbwq49L1w2dayhoEn/PotlC4Ml2uolBkM0smQdzIvSgk37yQaxDEOucvd9r+TMr2u8Pbvti1+HnA70Vt77FjO2QKprU6UX/GxmaCvkBMrUbqSK7J3Se2vxzgpzB7clhKKPd36ox045F7RzsMQqPSiWeepbEVa57D73HVPpedn4kqSgSh3LmmvYX1rltsSxWtV1TSN3t2rsGWOOXF4FXFJ5XXHn34iDpj7o8CxW6WG6Z7H0dZuxN0C8M8YqxGIz9CEpfy89Kbe3ALwYZcxhqb3AVnqQniOWvZ0p1olx8gCFPxMr6mA5J7fr51ZpbdbcJ9e7IKlvhnj3vHSpx5PddY2pGrG8q7MEmX1Puey12C4/bwHKnb9ZudYKjt1k/XoJGX/qSMdmhSXFVywrCqmLtp6yWwX0jtU0XigPVjR7g9QDeUyMZdmPXPuSQ3+L8y7uWemzRXuoK/291BlwMevW1bD5yNU3YgFLLv2PJZV9vYQc6+7oww0PfcW75O5Wbk42WJayBhV1z9WCKXuoXXNX8uLdecfSeu8UeCRDwiLxrr5LX81iAY51E/wb6TEbS4BHpZiNh/EsWr8NzAW8FlxkY7nQQoqptV/p2LveXddmUBg2Vc4MS+6R54jFz73KOxV+smQOuYk5cVPcweKXVtjcuaW9EsScCUnYM373XukwJ338VpVYXQDkgPOOHLwxHrh9smf1rtBqdS5+sllT3yuZHDbycy9pKBlbUrT1zj9zsge9KxRhY1yhnsiQw1Jur2LSc8/qRT5uDov3p15Cl9zDspvgxTe5uDC3kfwcuXiF3M0GkYXC4tb6XvPocANs7ZtEO6/RL6ERNJVYyJDrHUyUP+tXP5hmgBYXWQKq7tP3fzfgUnENgDk11fcscJcLtGuwB9WzuknKdyA7sQ7Yym0S+T5rBgN5cKqfwZfg3Pd/N7BnuEfvFm6RKyyZQPQJBDQCQazgQxUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hQazgQBUEglhVYA2hvwACLb/3EsH1jQAAAABJRU5ErkJggg==" alt="Sponsor 8" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Cultural Partner</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 9" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Food Sponsor</div>
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <img src="data:image/png;base64,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" alt="Sponsor 10" class="sponsor-logo">
+                        <div class="sponsor-tooltip">Entertainment Partner</div>
+                    </div>
+                </div>
+                
+                <!-- Become a sponsor call to action -->
+                <div class="become-sponsor-container">
+                    <a href="#" class="become-sponsor-btn">Become a Sponsor <i class="fas fa-heart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Decorative elements -->
+        <div class="footer-wave"></div>
+        <div class="footer-pattern"></div>
+        <div class="footer-dots"></div>
+        
+        <!-- Floating decorative emoji -->
+        <div class="footer-floating-element footer-element-1">🎭</div>
+        <div class="footer-floating-element footer-element-2">🎪</div>
+        <div class="footer-floating-element footer-element-3">🎨</div>
+        
+        <div class="footer-container">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <div class="footer-logo-container">
+                            <img src="data:image/png;base64,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" alt="Academia Prietenilor Logo" class="footer-logo">
+                            <div class="logo-squiggle"></div>
+                        </div>
+                        <p class="footer-text">Academia Prietenilor is dedicated to bringing Romanian culture and traditions to families in the UK through engaging events and festivals that create lasting memories.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon instagram-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon youtube-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li class="footer-link"><a href="#">Home</a></li>
+                            <li class="footer-link"><a href="#">Despre</a></li>
+                            <li class="footer-link"><a href="#">Anglia prin Ochii Mei</a></li>
+                            <li class="footer-link"><a href="#">Friends Kids Festival</a></li>
+                            <li class="footer-link"><a href="#">Gallery</a></li>
+                            <li class="footer-link"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Events</h3>
+                        <ul class="footer-links">
+                            <li class="footer-link"><a href="#">Friends Kids Festival</a></li>
+                            <li class="footer-link"><a href="#">Friends East Folkloric Festival</a></li>
+                            <li class="footer-link"><a href="#">Petreceri</a></li>
+                            <li class="footer-link"><a href="#">Gallery</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Contact Us</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">123 Festival Street, Barnsley, UK</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-text">+44 123 456 7890</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">info@academiaprietenilor.co.uk</div>
+                        </div>
+                        
+                        <h3 class="footer-column-title">Newsletter</h3>
+                        <p class="footer-text">Stay updated with our latest events!</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your email address">
+                            <button type="submit" class="newsletter-btn">Join</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 Academia Prietenilor. All Rights Reserved. Made with <span class="heart-icon">❤</span> in the UK.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Go to top button -->
+        <div class="go-top-btn" id="goTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Countdown Timer
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30); // Set to 30 days from now
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            
+            // Calculate days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            
+            // If the countdown is finished, display message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }
+        
+        // Initial call
+        updateCountdown();
+        
+        // Update the countdown every 1 second
+        const x = setInterval(updateCountdown, 1000);
+        
+        // Animation on scroll
+        window.addEventListener('scroll', function() {
+            const animatedElements = document.querySelectorAll('.performer-card, .activity-card');
+            
+            animatedElements.forEach(element => {
+                const position = element.getBoundingClientRect();
+                
+                // Check if element is in viewport
+                if(position.top < window.innerHeight && position.bottom >= 0) {
+                    element.style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            });
+        });
+        
+        // Preload banner image
+        window.addEventListener('load', function() {
+            // Replace placeholder with actual banner from PDF
+            const banner = document.querySelector('.banner-image');
+            
+            // Add animation to festival name and slogan
+            const festivalName = document.querySelector('.festival-name');
+            const festivalSlogan = document.querySelector('.festival-slogan');
+            
+            festivalName.style.opacity = '1';
+            festivalSlogan.style.opacity = '1';
+            
+            // Add floating animation to activity cards
+            const activityCards = document.querySelectorAll('.activity-card');
+            activityCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('float-animation');
+                }, index * 200);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const performerCards = document.querySelectorAll('.performer-card');
+    
+    performerCards.forEach(card => {
+        card.addEventListener('mouseenter', function(e) {
+            // Create musical notes on hover
+            createMusicNote(this);
+        });
+        
+        // Make buttons interactive
+        const button = card.querySelector('.btn-details');
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    function createMusicNote(card) {
+        const note = card.getAttribute('data-note');
+        const musicNote = document.createElement('span');
+        musicNote.className = 'music-note';
+        musicNote.textContent = note;
+        
+        // Position the note randomly within the card
+        const cardRect = card.getBoundingClientRect();
+        const x = Math.random() * cardRect.width;
+        const y = Math.random() * (cardRect.height / 2) + cardRect.height / 2;
+        
+        musicNote.style.left = `${x}px`;
+        musicNote.style.top = `${y}px`;
+        
+        card.appendChild(musicNote);
+        
+        // Remove the note after animation completes
+        setTimeout(() => {
+            musicNote.remove();
+        }, 3000);
+    }
+});
+
+        </script>
